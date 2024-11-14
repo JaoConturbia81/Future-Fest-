@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Responsive</title>
+
+    <script src="https://kit.fontawesome.com/3a7225da88.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <!-- Formulário de Login -->
+                <form action="/login" method="POST" class="sign-in-form">
+                    <h2 class="signin title">Sign In</h2>
+
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="usuario" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="senha" placeholder="Password" required>
+                    </div>
+                    <input type="submit" value="Login" class="btn solid">
+
+                    <p class="social-text">Or Sign In with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+
+                <!-- Formulário de Registro -->
+                <form action="/registro" method="POST" class="sign-up-form">
+                    <h2 class="signup title">Sign up</h2>
+
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="usuario" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="senha" placeholder="Password" required>
+                    </div>
+                    <input type="submit" value="Sign Up" class="btn solid">
+
+                    <p class="social-text">Or Sign Up with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Entrar</h3>
+                    <p>Lorem ipsum dolor sit amet adipisicing elit. Dolorem omnis veritatis nobis.</p>
+                    <button class="btn transparent" id="sign-up-btn">Novo Aqui?</button>
+                </div>
+                <a href="/">
+                    <img src="/img/Subtract.png" style="width: 400px;" class="image" alt="Rock">
+                </a>
+            </div>
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Ainda não tem uma conta?</h3>
+                    <p>Lorem ipsum dolor sit amet adipisicing elit. Dolorem omnis veritatis nobis.</p>
+                    <button class="btn transparent" id="sign-in-btn">Sign In</button>
+                </div>
+
+                <a href="/"><img src="/img/Subtract.png" class="image" alt="Rock"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sign_in_btn = document.querySelector("#sign-in-btn");
+        const sign_up_btn = document.querySelector("#sign-up-btn");
+        const container = document.querySelector(".container");
+
+        sign_up_btn.addEventListener('click', () => {
+            container.classList.add('sign-up-mode');
+        });
+
+        sign_in_btn.addEventListener('click', () => {
+            container.classList.remove('sign-up-mode');
+        });
+    </script>
+</body>
+
+</html>

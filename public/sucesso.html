@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Sucesso</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #000f23;
+            margin: 0; /* Remove margens padrão */
+            display: flex;
+            flex-direction: column; /* Coloca itens em coluna */
+            height: 100vh; /* Altura da tela */
+        }
+
+        .container {
+            /* Mantém o cabeçalho fixo no topo */
+            background-color: #000f23; /* Cor de fundo do cabeçalho */
+            padding: 10px; /* Espaçamento no cabeçalho */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between; /* Espaça os itens do nav */
+            align-items: center; /* Alinha itens verticalmente */
+        }
+
+        .titulo {
+            color: white;
+            text-align: center;
+            /* Empurra para baixo */
+        }
+
+        .p {
+            color: white;
+            text-align: center;
+            margin: 10px 0; /* Margem em cima e embaixo */
+        }
+
+        .btn {
+            background-color: #c3bd5c; /* Cor do botão */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none; /* Remove sublinhado */
+            transition: background-color 0.3s;
+            display: block; /* Faz o botão ocupar toda a largura disponível */
+            margin: 0 auto; /* Centraliza o botão */
+        }
+
+        .btn:hover {
+            background-color: #000f23; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">
+                <img src="img/INEC.png" style="width: 170px;" alt="logo">
+            </a>
+        </nav>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h1 class="titulo">Inscrição Realizada com Sucesso!</h1>
+        <p class="p">Obrigado por se inscrever. Você receberá mais informações em breve.</p>
+        <a href="/cursos" class="btn">Voltar para os cursos</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{
+    "cursos": [
+      {
+        "id": 1,
+        "nome": "Introdução à Economia Criativa",
+        "desc": "Este curso explora o conceito de Economia Criativa, abordando como a criatividade, cultura, tecnologia e empreendedorismo se unem para impulsionar o desenvolvimento econômico e social. Os alunos aprenderão sobre modelos de negócios criativos, políticas públicas, gestão de projetos culturais e como transformar ideias inovadoras em oportunidades de mercado.",
+        "imagem": "img/layer.png"
+      },
+      {
+        "id": 2,
+        "nome": "Marketing Digital",
+        "desc": "Este curso oferece uma introdução ao marketing digital, cobrindo tópicos como SEO, publicidade online, redes sociais e muito mais.",
+        "imagem": "img/digital-marketing.png"
+      },
+      {
+        "id": 3,
+        "nome": "SEO",
+        "desc": "Este curso foca em otimização de motores de busca (SEO), ensinando como melhorar a visibilidade do seu site nos resultados de busca.",
+        "imagem": "img/seo.png"
+      },
+      {
+        "id": 4,
+        "nome": "Lojas Virtuais",
+        "desc": "Aprenda como criar e gerenciar lojas virtuais de sucesso, incluindo aspectos técnicos e estratégicos para e-commerce.",
+        "imagem": "img/virtual_store.png"
+      },
+      {
+        "id": 5,
+        "nome": "Design e Identidade Visual",
+        "desc": "Curso focado em design gráfico e identidade visual, abordando desde a criação de logotipos até a construção de marcas consistentes.",
+        "imagem": "img/layer.png"
+      },
+      {
+        "id": 6,
+        "nome": "Criação de Conteúdo",
+        "desc": "Este curso ensina como criar conteúdo eficaz para diferentes plataformas, incluindo blogs, redes sociais e vídeos.",
+        "imagem": "img/manager.png"
+      }
+    ]
+  }
+  

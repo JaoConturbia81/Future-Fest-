@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">Cadastro de Curso</h1>
+                        <form action="/cadastro" method="post">
+                            <div class="form-group">
+                                <label for="titulo">Título:</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="urlimg">Urlimg:</label>
+                                <input type="text" class="form-control" id="urlimg" name="urlimg" required>
+                            <div class="form-group form-check">
+                                <br>
+                            <button type="submit" class="btn btn-primary btn-block">Cadastrar Curso</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        </div>
+                        <h2 class="text-center">Lista de Cursos</h2>
+                        <!-- Container para os cards -->
+                        <div class="row" id="cursos">
+                            <!-- Os cursos serão inseridos aqui pelo JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    fetch('/cursos')
+        .then(response => response.json())
+        .then(cursos => {
+            const cursosCards = document.getElementById('cursos'); // Alterado para 'cursos', que é o id correto no HTML
+            cursosCards.innerHTML = cursos.map(curso => `
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="${curso.urlimg}" alt="Imagem do Curso" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title">${curso.titulo}</h5>
+                            <p class="card-text">
+                                Este curso investiga o conceito de ${curso.titulo}, mostrando como a criatividade, cultura, tecnologia e empreendedorismo se unem para impulsionar o desenvolvimento econômico e social.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <a href="/atualizar?id=${curso._id}" class="btn btn-warning btn-sm">Atualizar</a>
+                                <form action="/deletar" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este curso?');" style="display:inline;">
+                                    <input type="hidden" name="id" value="${curso._id}">
+                                    <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        })
+        .catch(error => console.error('Erro ao carregar cursos:', error));
+});
+

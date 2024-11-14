@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contato</title>
+</head>
+<body>
+    <header style="background-image: url('img/background-contacto.jpg');">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/INEC.png" style="width: 170px;" alt="logo">
+                </a>
+                <ul style="margin-top: -70px;" class="ul">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/sobre">Sobre nós</a></li>
+                    <li><a href="/cursos">Cursos</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <a href="/login" class="btn" style="font-size: 15px;" >LOGIN</a>
+                        </a>
+                    </div>
+                </ul>
+            </nav>
+
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Nos Contate</h1>
+                    <p>Entre em contacto com o nosso time e eles irão te retornar em tempo recorde!</p>
+                </div>
+            </section>
+        </div>
+    </header>
+    <section class="contacto">
+        <div class="container">
+            <div class="mapa">      
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4348.73958149934!2d-46.6270683377209!3d-23.574206316830725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sfiap%20school!5e0!3m2!1spt-PT!2sbr!4v1726756129897!5m2!1spt-PT!2sbr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contacto-info">
+                <div class="left-side">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p>Av. Lins de Vasconcelos, 1264 - Aclimação, São Paulo - SP, 01538-001</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p>contato@inec.com.br</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>(11)98765-4321</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>(11)98765-4330</p>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <form action="">
+                        <input type="text" placeholder ="Nome" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="text" placeholder="Assunto" required>
+                        <textarea cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+                        <a class="btn" a href="/">Enviar Mensagem</a>
+                    </form>
+                </div>
+                <div class="right-side"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <ul>
+                <h3>Inec. </h3>
+                <p>"Impulsionando talentos e ideias criativas para transformar o mundo ao nosso redor. Juntos, construímos oportunidades e inovamos o futuro."
+                </p>
+                <div class="redes-socias">
+                    <img src="img/facebook.png" alt="face">
+                    <img src="img/twitter.png" alt="x">
+                    <img src="img/instagram.png" alt="inst">
+                    <img src="img/linkedin.png" alt="link">
+                </div>
+            </ul>
+            <ul>
+                <div class="link">
+                <h3>Link</h3>
+                <li><a href="#Home">Homes</a> </li>
+                <li><a href="#Preços">Preços</a> </li>
+                <li><a href="#Baixar">Baixar</a> </li>
+                <li><a href="#Sobre">Sobre</a> </li>
+                <li><a href="#Servicos">Serviços</a></div> </li>
+            </ul>
+            <ul>
+                <h3>Suporte</h3>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Como Funciona</a></li>
+                <li><a href="#">Características</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Comunidades</a></li>
+            </ul>
+            <ul>
+                <h3>Nos contacte</h3>
+                <li>
+                    <p class="branco">(11)98765-4321</p>
+                </li>
+                <li>
+                    <p class="branco">emailempresa@gmail.com</p>
+                </li>
+                <li>
+                    <p class="branco">Brasil</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const app = express();
+const port = 3000; // ou outra porta de sua escolha
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
+// Conectar ao MongoDB
+mongoose.connect('mongodb://localhost:27017/seu-banco-de-dados', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+// Definir o modelo de Mensagem
+const Mensagem = mongoose.model('Mensagem', new mongoose.Schema({
+    nome: String,
+    email: String,
+    assunto: String,
+    mensagem: String,
+}));
+
+// Rota para enviar mensagem
+app.post('/api/enviar-mensagem', async (req, res) => {
+    const { nome, email, assunto, mensagem } = req.body;
+
+    const novaMensagem = new Mensagem({ nome, email, assunto, mensagem });
+
+    try {
+        await novaMensagem.save();
+        res.status(201).send({ message: 'Mensagem enviada com sucesso!' });
+    } catch (error) {
+        res.status(500).send({ error: 'Erro ao enviar a mensagem.' });
+    }
+});
+
+// Iniciar o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Curso</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">Atualizar Curso</h1>
+                        <form action="/atualizar" method="post">
+                            <input type="hidden" id="id" name="id">
+                            <div class="form-group">
+                                <label for="titulo">Título:</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="urlimg">urlimg:</label>
+                                <input type="text" class="form-control" id="urlimg" name="urlimg" required>
+                            </div>
+                            <div class="form-group form-check">
+                            <button type="submit" class="btn btn-primary btn-block">Atualizar Curso</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cursoId = urlParams.get('id');
+
+            if (cursoId) {
+                fetch(`/curso/${cursoId}`)
+                    .then(response => response.json())
+                    .then(curso => {
+                        document.getElementById('id').value = curso._id;
+                        document.getElementById('titulo').value = curso.titulo;
+                        document.getElementById('disponivel').checked = curso.disponivel;
+                    })
+                    .catch(error => console.error('Erro ao carregar dados do curso:', error));
+            }
+        });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f1f6fc;
+}
+
+section, footer {
+    padding: 54px 0;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+p {
+    color: #0000009c;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Botão */
+.btn {
+    background-color: #c3bd5c;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #969247;
+}
+
+/* Cabeçalho */
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #000f23;
+}
+
+/* Navegação */
+nav {
+    display: block;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    padding: 5px 10px;
+}
+
+/* Estilo do pseudo-elemento para links */
+nav ul a:not(.btn)::after {
+    content: "";
+    background-color: #c3bb5c;
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s; 
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.banner .banner-text {
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-size: 64px;
+    color: white;
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: #d9d8d8b7;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+
+/*escrever daq para baixo*/
+.diferencias .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.diferencias .card{
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.diferencias .card:hover{
+    box-shadow: 0px 10px 67px 8px #000f23;
+}
+.diferencias .card img{
+    width: 60px;
+}
+.diferencias .card .titulo{
+    margin: 13px 0;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.casa .container{
+    display: flex;
+    align-items: center;
+}
+.casa .casa-img{
+    width: 50%;
+}
+
+.casa .casa-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.casa .casa-text{
+    width: 50%;
+    padding-left: 90px;
+}
+
+.casa .casa-text h2{
+    font-size: 2.5em;
+}
+
+.casa .casa-text p{
+    margin: 20px 0;
+    color: var(--color-p);
+}
+
+.casa .casa-text p b{
+    color: black;
+    font-size: 25px;
+}
+
+.casa .casa-text a{
+    background-color: #021329;
+}
+
+
+.casa .casa-text a:hover{
+    transition: .5s ease;
+    background-color: #0c1e34f9;
+}
+
+footer {
+    background-color: #000f23;
+}
+
+footer .container {
+    display: flex;
+    color: white;
+}
+
+footer .container ul {
+    width: 25%;
+    list-style: none; /* Remove os pontos */
+    padding-left: 0; /* Remove o padding à esquerda */
+}
+
+footer .container h3 {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+footer .container .redes-socias img {
+    margin-right: 10px;
+}
+
+footer .container ul > p {
+    margin-bottom: 20px;
+    color: white;
+}
+
+footer .container li {
+    margin: 10px 0;
+    color: white;
+}
+
+footer .container a {
+    color: white; /* Links na cor preta */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer .container a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+
+/* Pagina Sobre*/
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sobre .sobre-text{
+    width: 50%;
+    padding-right: 40px;
+}
+
+.sobre .sobre-text p{
+    margin: 19px 0;
+    color: white;
+}
+
+.sobre .sobre-img{
+    width: 50%;
+}
+
+.depoimentos h3{
+    text-align: center;
+}
+
+.depoimentos p{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffffd4;
+}
+
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.depoimentos .card-item{
+    background-color: #000f23;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    transition: 0.3s;
+}
+
+.depoimentos .card-item img{
+    border-radius: 100%;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.depoimentos .card-item .nome-user{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.depoimentos .card-item .depoimento-user{
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.depoimentos .card-item .estrelas{
+    border-top: 2px solid #71767a23;
+}
+
+.depoimentos .card-item .estrelas{
+    color: #c3bd5c;
+    margin-top: 15px;
+    font-size: 15px;
+    
+}
+
+.depoimentos .card-item:hover{
+    background-color: #c3bd5c;
+    cursor:context-menu;
+    transition: ease .3s;
+} 
+
+.depoimentos .card-item:hover .nome-user,
+.depoimentos .card-item:hover .depoimento-user,
+.depoimentos .card-item:hover .estrelas{
+    color: white;
+}
+
+
+
+
+/*pagina servico*/
+.cursos .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.cursos .card{
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.cursos .card:hover{
+    box-shadow: 0px 10px 67px 8px #000f23;
+}
+.cursos .card img{
+    width: 60px;
+}
+.cursos .card .titulo{
+    margin: 13px 0;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/*pagina de contato*/
+.contacto-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.contacto-info .left-side{
+    width: 60%;
+    padding: 30px;
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+
+}
+
+.contacto-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contacto-info .left-side div i{
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+
+.contacto-info .left-side p{
+    font-size: 15px;
+    color: white;
+}
+
+.contacto-info .right-side{
+    width: 50%;
+    position: relative;
+    left: 50px; /* move o elemento 50px para a direita */
+    max-width: 400px;
+
+}
+
+.contacto-info .right-side input{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    font-weight: lighter;
+}
+
+.contacto-info .right-side input:focus,
+.contacto-info .right-side textarea:focus{
+    border-color: #000f23;
+}
+
+.contacto-info .right-side textarea{
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+}
+
+
+/*Cadastro*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jomolhari&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+body {
+    margin: 0;
+}
+ 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+ 
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000f23;
+    display: flex;
+    justify-content: center;
+    margin-top: -150px;
+}
+ 
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+.left-login > h1{
+    color: white
+}
+ 
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+ 
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    background: #4c6a94;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+ 
+.card-login > h1{
+    color: white;
+    font-weight: 800;
+    margin: 0;
+}
+ 
+.textfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+    color: white;
+}
+ 
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #96c3ff ;
+    color: white;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+};
+ 
+.textfield > label{
+    color: white;
+    margin-bottom: 10px;
+}
+ 
+.textfield > input::placeholder{
+    color: black;
+}
+ 
+.btn-login{
+    width: 100%;
+    padding: 16px 0;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: white;
+    background: #c3bb5c;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #c3bb5c;
+}
+
+/*Inserir*/
+
+.form{
+    background-color: #000f23;
+    width: 300px;
+    justify-content: center;
+}
+
+.text{
+    color: #ffffff;
+}
+
+/*Inserir*/
+
+.branco{
+    color: white;
+}
+
+.link{
+    padding-left: 70px;
+}
+
+/*Chat*/
+
+#usuario{
+    border-radius: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Aumenta o espaço entre o label e o campo */
+    font-weight: 500;
+    color: #333; /* Torna o texto mais visível */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Leve sombra para destacar */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Suave transição ao focar */
+}
+
+.form-group input:focus {
+    border-color: #000f23; /* Cor de destaque ao focar no campo */
+    box-shadow: 0 5px 10px rgba(108, 99, 255, 0.2); /* Sombra ao focar */
+}
+
+button.btn-block {
+    background-color: #000f23;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-block:hover {
+    background-color: #c3bd5c; /* Cor mais intensa ao passar o mouse */
+}

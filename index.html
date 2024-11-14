@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/Group 1.png" type="img/x-icon">
+    <title>Home</title>
+    <style>
+        .side-menu {
+            display: none;
+            /* Esconde o menu inicialmente */
+            position: fixed;
+            /* Fixa o menu à tela */
+            top: 0;
+            right: 0;
+            /* Alinha o menu à direita */
+            width: 30%;
+            /* Ajuste conforme necessário */
+            height: 100%;
+            background-color: #000f23;
+            /* Cor do menu */
+            z-index: 1000;
+            /* Fica acima de outros elementos */
+            overflow-y: auto;
+            /* Permite rolagem se necessário */
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            /* Sombra para o menu */
+            padding: 20px;
+            /* Espaçamento interno */
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-image: url('img/background-home.jpg');">
+        <div class="container">
+            <nav>
+                <a href="/">
+                    <img src="img/INEC.png" style="width: 170px;" alt="logo">
+                </a>
+                <ul style="margin-top: -70px;" class="ul">
+                    <div style="justify-content: center; display: flex; padding-right: 140px;">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/sobre">Sobre nós</a></li>
+                        <li><a href="/cursos">Cursos</a></li>
+                        <li><a href="/contato">Contato</a></li>
+                    </div>
+                    <a href="/login" class="btn" style="font-size: 15px; margin-right: 30px;">LOGIN</a>
+                    <div class="h-icons" style="padding-left: 10px;">
+                        <a href="/chat" style="margin-left: 10px;">
+                            <img style="width: 40px;" src="/img/chat.png" alt="menu">
+                        </a>
+                    </div>
+                </ul>
+            </nav>
+
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Inec</h1>
+                    <p>Construa a sua marca, conquiste o mundo sem habilidades de código ou design necessária</p>
+                    <a href="/contato" class="btn">Entrar em contato</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <section class="diferencias">
+        <div class="container">
+            <div class="card">
+                <img src="img/medal.png" alt="medalha">
+                <h3 class="titulo">Excelência em Empreendedorismo Criativo</h3>
+                <p>
+                    No Inec, acreditamos que o sucesso nasce da combinação entre criatividade e estratégia.
+                    Oferecemos cursos e programas de capacitação que ajudam empreendedores a transformar suas ideias em
+                    negócios sustentáveis.
+                </p>
+            </div>
+            <div class="card">
+                <img src="img/24h.png" alt="24 horas">
+                <h3 class="titulo">Consultoria Personalizada 24 horas</h3>
+                <p>
+                    Nosso time de especialistas está disponível 24 horas por dia para apoiar você em todas as fases do
+                    seu projeto. Desde a concepção da ideia até a execução, estamos prontos para ajudar a transformar
+                    seu potencial
+                    criativo em resultados concretos.
+                </p>
+            </div>
+            <div class="card">
+                <img src="img/caixa.png" alt="caixa">
+                <h3 class="titulo">Atuação Global</h3>
+                <br>
+                <p>
+                    O Inec conecta empreendedores criativos de diversos países, oferecendo uma rede global de apoio e
+                    colaboração. Expanda sua visão e alcance novos mercados com o suporte de uma instituição que
+                    acredita no poder da
+                    criatividade sem fronteiras.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="casa">
+        <div class="container">
+            <div class="casa-img">
+                <img src="img/dados.jpg" alt="lampada">
+            </div>
+            <div class="casa-text">
+                <h2>Você sabe o que é Economia Criativa?</h2>
+                <p>A Economia Criativa é um setor que valoriza a criatividade e a inovação para gerar valor econômico.
+                    Inclui atividades como artes, design, música e tecnologia. Esse conceito destaca a importância da
+                    cultura e do conhecimento, promovendo emprego e desenvolvimento sustentável, além de incentivar a
+                    diversidade e a colaboração.</p>
+                <a href="/sobre" class="btn">Saiba Mais</a>
+                <style>
+
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul>
+                <h3>Inec.</h3>
+                <p>"Impulsionando talentos e ideias criativas para transformar o mundo ao nosso redor. Juntos,
+                    construímos oportunidades e inovamos o futuro."
+                </p>
+                <div class="redes-sociais">
+                    <img src="img/facebook.png" alt="facebook">
+                    <img src="img/twitter.png" alt="twitter">
+                    <img src="img/instagram.png" alt="instagram">
+                    <img src="img/linkedin.png" alt="linkedin">
+                </div>
+            </ul>
+            <ul>
+                <div class="link">
+                    <h3>Link</h3>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Preços">Preços</a></li>
+                    <li><a href="#Baixar">Baixar</a></li>
+                    <li><a href="#Sobre">Sobre</a></li>
+                    <li><a href="#Servicos">Serviços</a></li>
+                </div>
+            </ul>
+            <ul>
+                <h3>Suporte</h3>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Como Funciona</a></li>
+                <li><a href="#">Características</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Comunidades</a></li>
+            </ul>
+            <ul>
+                <h3>Nos contacte</h3>
+                <li>
+                    <p class="branco">(11) 98765-4321</p>
+                </li>
+                <li>
+                    <p class="branco">emailempresa@gmail.com</p>
+                </li>
+                <li>
+                    <p class="branco">Brasil</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <a href="javascript:void(0);" onclick="toggleMenu()">
+                <img style="width: 20px;" src="/img/close_24dp_C3BD5C_FILL0_wght400_GRAD0_opsz24.png" alt="fechar">
+            </a>
+        </div>
+        <div class="menu-chat">
+            <div class="menu-content">
+                <p style="color: white;" class="texto1">
+                    <b style="font-size: 20px;">Bem-vindo</b> ao nosso <b style="font-size: 20px;">ChatBot</b>!<br>
+                    <br>
+                    Aqui você poderá escolher produtos ecológicos baseados em suas preferências e necessidades.
+                </p>
+            </div>
+            <div class="chat" style="margin-top: 10px;">
+                <label for="usuario" class="form-label" style="color: white;">Usuário:</label>
+                <input type="text" placeholder="Nome" required class="chat">
+                <style>
+                    .chat {
+                        width: 80%;
+                        position: relative;
+                        max-width: 400px;
+                    }
+
+                    .texto1 {
+                        color: #c3bd5c;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            if (sideMenu.style.display === 'none' || sideMenu.style.display === '') {
+                sideMenu.style.display = 'block';
+            } else {
+                sideMenu.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

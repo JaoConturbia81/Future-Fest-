@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cursos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-image: url('img/background-servicos.jpg');
+            color: white;
+        }
+
+        .btn-c {
+        background-color: #c3bd5c;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: inline-block;
+        transition: 0.3s ease;
+        text-align: center;
+    }
+
+    .btn-c:hover {
+        background-color: #969247;
+    }
+
+
+        nav {
+            display: block;
+            padding-top: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .heading {
+            text-align: center;
+            padding-bottom: 15px;
+            font-size: 50px;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Três cards por linha */
+            gap: 15px;
+        }
+
+        .box {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            border-radius: 5px;
+            background: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Adicionando transição */
+            border-radius: 10px;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            /* Eleva o card */
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .3);
+            /* Sombreamento mais intenso */
+        }
+
+        .box img {
+            height: 80px;
+        }
+
+        .box h3 {
+            color: #444;
+            font-size: 22px;
+            padding: 10px 0;
+        }
+
+        .box p {
+            color: #777;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+
+        .btn {
+            display: inline-block;
+            background: #c3bd5c;
+            color: #fff;
+            font-size: 17px;
+            border-radius: 5px;
+            padding: 8px 25px;
+            margin-top: 1px;
+        }
+
+        .btn:hover {
+            letter-spacing: 1px;
+        }
+
+        .form-inscricao {
+            margin-top: 10px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+            display: none;
+        }
+
+        .btn-block {
+            background-color: #c3bd5c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .btn-block:hover {
+            background-color: #000f23;
+        }
+
+        footer {
+            background-color: #000f23;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 5px;
+        }
+
+        footer .redes-sociais img {
+            width: 20px;
+            margin: 0 5px;
+        }
+
+        nav {
+    display: block;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    padding: 5px 10px;
+}
+
+/* Estilo do pseudo-elemento para links */
+nav ul a:not(.btn)::after {
+    content: "";
+    background-color: #c3bb5c;
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s; 
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+            <nav>
+                <a href="/">
+                    <img src="img/INEC.png" style="width: 170px;" alt="logo">
+                </a>
+                <ul style="margin-top: -70px;" class="ul">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/sobre">Sobre nós</a></li>
+                    <li><a href="/cursos">Cursos</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <a href="/login" class="btn-c" style="font-size: 15px; margin-right: 20px;">LOGIN</a>
+                </ul>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Cursos</h1>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <div class="container">
+        <br>
+        <h1 class="heading"></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="img/Introdução a Economia Criativa - Dourado.png" alt="">
+                <h3>Economia Criativa</h3>
+                <p>Este curso investiga o conceito de Economia Criativa, mostrando como a criatividade, cultura,
+                    tecnologia e empreendedorismo se unem para impulsionar o desenvolvimento econômico e social. Gestão
+                    de projetos
+                    culturais e como transformar ideias inovadoras em oportunidades de mercado.</p>
+                <br>
+
+                <a href="#" class="btn" onclick="toggleForm('inscricao-1'); return false;">Inscrever-se</a>
+                <div id="inscricao-1" class="form-inscricao">
+                    <h4>Inscrição para Economia Criativa</h4>
+                    <form action="/cursos" method="post">
+                        <input type="hidden" name="curso" value="Introdução a Economia Criativa">
+                        <div class="form-group">
+                            <label for="nome-1">Nome:</label>
+                            <input type="text" id="nome-1" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-1">E-mail:</label>
+                            <input type="email" id="email-1" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-nascimento-1">Data de Nascimento:</label>
+                            <input type="date" id="data-nascimento-1" name="data-nascimento" required>
+                        </div>
+                        <button type="submit" class="btn-block">Enviar Inscrição</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/Consultoria Criativa - Dourado.png" alt="">
+                <h3>Consultoria Criativa</h3>
+                <p>Curso direcionado a profissionais que desejam atuar como consultores em projetos criativos,
+                    oferecendo soluções inovadoras e estratégicas para empresas e artistas. Aborda metodologias de
+                    inovação, pesquisa de tendências e gestão da criatividade. Indicado para consultores e gestores que
+                    buscam atuar no mercado criativo.</p>
+                <br>
+                <a href="#" class="btn" onclick="toggleForm('inscricao-2'); return false;">Inscrever-se</a>
+                <div id="inscricao-2" class="form-inscricao">
+                    <h4>Inscrição para Consultoria Criativa</h4>
+                    <form action="/cursos" method="post">
+                        <input type="hidden" name="curso" value="Consultoria Criativa">
+                        <div class="form-group">
+                            <label for="nome-2">Nome:</label>
+                            <input type="text" id="nome-2" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-2">E-mail:</label>
+                            <input type="email" id="email-2" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-nascimento-2">Data de Nascimento:</label>
+                            <input type="date" id="data-nascimento-2" name="data-nascimento" required>
+                        </div>
+                        <button type="submit" class="btn-block">Enviar Inscrição</button>
+                    </form>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/Economia Colaborativa - Dourado.png" alt="">
+                <h3>Economia Colaborativa</h3>
+                <p>Explora modelos de negócios baseados na colaboração e no compartilhamento, como coworking,
+                    plataformas de financiamento coletivo e economia de compartilhamento. Ideal para empreendedores que
+                    desejam criar negócios sustentáveis e inovadores dentro do ecossistema criativo.</p>
+
+                <br>
+                <a href="#" class="btn" onclick="toggleForm('inscricao-3'); return false;">Inscrever-se</a>
+                <div id="inscricao-3" class="form-inscricao">
+                    <h4>Inscrição para Economia Colaborativa</h4>
+                    <form action="/cursos" method="post">
+                        <input type="hidden" name="curso" value="Economia Colaborativa">
+                        <div class="form-group">
+                            <label for="nome-3">Nome:</label>
+                            <input type="text" id="nome-3" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-3">E-mail:</label>
+                            <input type="email" id="email-3" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-nascimento-3">Data de Nascimento:</label>
+                            <input type="date" id="data-nascimento-3" name="data-nascimento" required>
+                        </div>
+                        <button type="submit" class="btn-block">Enviar Inscrição</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/Gestão de Projetos - Dourado.png" alt="">
+                <h3>Gestão de Projetos</h3>
+                <p>
+                    Curso voltado para a gestão eficaz de projetos no setor criativo. Inclui metodologias ágeis,
+                    planejamento, cronograma, orçamento e gestão de equipes. Perfeito para profissionais que trabalham
+                    com eventos, produções audiovisuais ou qualquer projeto que exija organização e liderança.</p>
+                <br>
+                <a href="#" class="btn" onclick="toggleForm('inscricao-4'); return false;">Inscrever-se</a>
+                <style>
+                    .btn {
+                        margin-top: 10px;
+                    }
+                </style>
+                <div id="inscricao-4" class="form-inscricao">
+                    <h4>Inscrição para Gestão de Projetos Criativos</h4>
+                    <form action="/cursos" method="post">
+                        <input type="hidden" name="curso" value="Gestão de Projetos Criativos">
+                        <div class="form-group">
+                            <label for="nome-4">Nome:</label>
+                            <input type="text" id="nome-4" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-4">E-mail:</label>
+                            <input type="email" id="email-4" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-nascimento-4">Data de Nascimento:</label>
+                            <input type="date" id="data-nascimento-4" name="data-nascimento" required>
+                        </div>
+                        <button type="submit" class="btn-block">Enviar Inscrição</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/Empreendedorismo Criativo - Dourado.png" alt="">
+                <h3>Empreendedorismo Criativo</h3>
+                <p>Focado em quem deseja iniciar e administrar negócios inovadores no setor criativo. Trata da concepção
+                    de ideias, desenvolvimento de modelos de negócios, planejamento financeiro, captação de recursos e
+                    estratégias de marketing para startups criativas.</p>
+                <br>
+
+                <a href="#" class="btn" onclick="toggleForm('inscricao-5'); return false;">Inscrever-se</a>
+                <div id="inscricao-5" class="form-inscricao">
+                    <h4>Inscrição para Empreendedorismo Criativo</h4>
+                    <form action="/cursos" method="post">
+                        <input type="hidden" name="curso" value="Empreendedorismo Criativo">
+                        <div class="form-group">
+                            <label for="nome-5">Nome:</label>
+                            <input type="text" id="nome-5" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-5">E-mail:</label>
+                            <input type="email" id="email-5" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-nascimento-5">Data de Nascimento:</label>
+                            <input type="date" id="data-nascimento-5" name="data-nascimento" required>
+                        </div>
+                        <button type="submit" class="btn-block">Enviar Inscrição</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/Marketing Digital Para Economia Criativa - Dourado.png" alt="">
+                <h3>Marketing Digital</h3>
+                <p>Curso centrado em estratégias de marketing digital para o mercado criativo, abordando SEO, gestão de
+                    mídias sociais, e-commerce e publicidade online. Ideal para quem busca ampliar o alcance e as vendas
+                    de negócios criativos por meio de ferramentas e técnicas digitais.</p>
+                <br>
+                <a href="#" class="btn" onclick="toggleForm('inscricao-6'); return false;">Inscrever-se</a>
+                <div id="inscricao-6" class="form-inscricao">
+                    <h4>Inscrição para Marketing Digital</h4>
+                    <form action="/cursos" method="post">
+                        <input type="hidden" name="curso" value="Marketing Digital para Economia Criativa">
+                        <div class="form-group">
+                            <label for="nome-6">Nome:</label>
+                            <input type="text" id="nome-6" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-6">E-mail:</label>
+                            <input type="email" id="email-6" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-nascimento-6">Data de Nascimento:</label>
+                            <input type="date" id="data-nascimento-6" name="data-nascimento" required>
+                        </div>
+                        <button type="submit" class="btn-block">Enviar Inscrição</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <footer>
+        <div class="container">
+            <ul>
+                <h3>Inec.</h3>
+                <p>"Impulsionando talentos e ideias criativas para transformar o mundo ao nosso redor..."</p>
+                <div class="redes-sociais">
+                    <img src="img/facebook.png" alt="Facebook">
+                    <img src="img/twitter.png" alt="Twitter">
+                    <img src="img/instagram.png" alt="Instagram">
+                    <img src="img/linkedin.png" alt="LinkedIn">
+                </div>
+            </ul>
+            <ul>
+                <div class="link">
+                    <h3>Link</h3>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Preços">Preços</a></li>
+                    <li><a href="#Baixar">Baixar</a></li>
+                    <li><a href="#Sobre">Sobre</a></li>
+                    <li><a href="#Servicos">Serviços</a></li>
+                </div>
+            </ul>
+            <ul>
+                <h3>Suporte</h3>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Como Funciona</a></li>
+                <li><a href="#">Características</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Comunidades</a></li>
+            </ul>
+            <ul>
+                <h3>Nos contacte</h3>
+                <li><a href="#">(11) 98765-4321</a></li>
+                <li><a href="#">emailempresa@gmail.com</a></li>
+                <li><a href="#">Brasil</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function toggleForm(formId) {
+            const form = document.getElementById(formId);
+            form.style.display = form.style.display === "none" || form.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>
